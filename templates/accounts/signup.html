@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'images/assets/LogoGlyphMd.svg' %}" alt="">
+        <form method="post" action="">
+            {% csrf_token %}
+
+            <label for="name">Username</label>
+            {{user_form.username}}
+            {% if user_form.username.errors %}
+                 <div class="alert alert-danger">{{ user_form.username.errors }}</div>
+            {% endif %}
+
+            <label for="name">College Email</label>
+            {{user_form.email}}
+            {% if user_form.email.errors %}
+                 <div class="alert alert-danger">{{ user_form.email.errors }}</div>
+            {% endif %}
+
+            <label for="name">Password</label>
+            {{user_form.password1}}
+            {% if user_form.password1.errors %}
+                <div class="alert alert-danger">{{ user_form.password1.errors }}</div>
+            {% endif %}
+
+            <label for="name">Confirm Password</label>
+            {{user_form.password2}}
+            {% if user_form.password2.errors %}
+                <div class="alert alert-danger">{{ user_form.password2.errors }}</div>
+            {% endif %}                
+            <!-- <label for="name">Major</label>
+            
+                <select>
+                    <option value="is">IS</option>
+                    <option value="cs">CS</option>
+                    <option value="sc">SC</option>
+                    <option value="csys">CSYS</option>
+                </select>          -->
+            <button type="submit">Sign up</button>
+        </form>
+        <div class="txt">
+            <p>Already have an account?</p><a href="{% url 'login' %}">Log in.</a>
+        </div>
+    </div>
+</body>
+</html>
