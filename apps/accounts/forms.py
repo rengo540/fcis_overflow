@@ -33,16 +33,17 @@ class UserForm(UserCreationForm):
         email = self.cleaned_data.get('email')
         if email:
             college_id = get_id_from_email(email)
-            year = college_id[:4]
-            if int(year)> datetime.datetime.now().year :
-                raise forms.ValidationError('invalid college id')
-
+            
 
             if college_id is None :
                 raise forms.ValidationError('that is not an college email, must have an id ')
             else :
                 if not len(college_id)==11:
                     raise forms.ValidationError('college id is not complete')
+
+                year = college_id[:4]
+                if int(year)> datetime.datetime.now().year :
+                    raise forms.ValidationError('invalid college id')
 
             if not email.endswith('@cis.asu.edu.eg'):
                 raise forms.ValidationError('Email must be end with @cis.asu.edu.eg')
