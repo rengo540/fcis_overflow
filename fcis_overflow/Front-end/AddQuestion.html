@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="AddQuestion.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="assets/LogoMd1.svg" alt="">
+            <div id="navigat">
+                <button id="prdct"> Products </button>       
+                <input class="small-search" type="search" placeholder="Search...">
+                <div className='btns' style="display: flex; gap:25px;  flex-wrap: wrap;">
+                    <a class="lgn" href="Login.html" >Log in</a>
+                    <a href="register.html" class="rgstr">Register</a>
+                  </div>
+        </nav>
+    </header>
+    <main>
+        <form action="">
+            <div class="form-container">
+        <div class="title"> 
+            <h2>Title</h2>
+            <p>Be specific and imagine you’re asking a question to another person.</p>
+            <input type="text" maxlength="300" placeholder="e.g. Is there an R function for finding the..?" value data-min-length="15"></div>
+            <div class="discription title"> 
+                <h2>description</h2>
+                <p>Introduce the problem and expand on what you put in the title. Minimum 20 characters.</p>
+                <input type="text" placeholder="e.g i have problem on the page placement.."/>
+            </div>
+            
+            <div class="Tags title"> 
+                <h2>Level</h2>
+                <select name="levels" id="">
+                    <option value="">level 1</option>
+                    <option value="">level 2</option>
+                    <option value="">level 3</option>
+                    <option value="">level 4</option>
+                </select>
+            </div>
+            <div class="Tags title"> 
+                <h2>Course name</h2>
+                <p>Try to add the course name correctly.</p>
+                <input type="text" id="tagsInput" placeholder="e.g Algorithms DataSecurity">
+                <div id="tagsContainer" class="tags-container" ></div>
+                <div id="savedTagsContainer" class="saved-tags-container"></div>
+            </div>
+            <div class="Tags title"> 
+                <h2>Attachment</h2>
+                <input type="file" name="file" id="file" placeholder="e.d codefile pdf">
+            </div>
+          <button type="submit">Add</button>
+              </div>
+        </form>
+    </main>
+</body>
+<script src="Tags.js"></script>
+</html>
