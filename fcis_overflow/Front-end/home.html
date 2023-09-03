@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="header.css">
         <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="Filter.css">
     </head>
     <style>
        
@@ -15,9 +16,7 @@
             <nav class="navbar">
                 <img src="assets/LogoMd1.svg" alt="">
                 <div id="navigat">
-                    <button id="prdct"> Products </button>       
-                    <button class="btn"> Customers </button>
-                    <button class="btn"> Use cases </button>
+                    <button id="prdct"> Products </button>      
                     <input class="small-search" type="search" placeholder="Search...">
                     <div className='btns' style="display: flex; gap:25px;  flex-wrap: wrap;">
                         <a class="lgn" href="Login.html" >Log in</a>
@@ -25,30 +24,88 @@
                       </div>
             </nav>
         </header>
-        <aside>
+        <aside class="home-side">
             <div>
                 <a href="home.html" class="nav-link actv">Home</a>
                 <a href="Questions.html" class="nav-link">Question</a>
                 <a href="tags.html" class="nav-link">Tags</a>
                 <a href="Users.html" class="nav-link">Users</a>
             </div>
-            <span>
+            <!-- <span>
                 <p>@omaryassen</p>
                 <p>@rengo</p>
-            </span>
+            </span> -->
         </aside>
         <main>
            <div class="head">
                 <h2>Top Questions</h2>
                 <button>Add Question</button>
            </div>
-          <!--  <div class="contain-btns">
+            <div class="contain-btns" >
            <div class="button-group">
             <button class="button">Today</button>
             <button class="button">Week</button>
             <button class="button">month</button>
           </div>
-        </div> -->
+          <div class="body">
+            <div class="filter-button">
+              <button type="submit" class="fltr-btn" id="filterButton">Filter</button>
+            </div>
+            <div class="filter-container">
+                <div class="filterMenu">
+                <span>
+                  <h4>Filter by</h4> 
+                  <label class="container">
+                    <input type="checkbox" name="radio" value="No answers">No answers</input>
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">
+                    <input type="checkbox" name="radio" value="answered">answered</input>
+                    <span class="checkmark"></span>
+                  </label>
+                </span>
+                <span class="lvls">
+                    <select name="levels" id="lvls">
+                      <option value="lvl1">Level 1</option>
+                      <option value="lvl2">Level 2</option>
+                      <option value="lvl3">Level 3</option>
+                      <option value="lvl4">Level 4</option>
+                  </select>   
+                  </span>   
+                <span>
+                  <h4>Sorted by</h4>
+                  <label class="container">
+                    <input type="radio" name="filterType" value="Newest" checked>Newest</input>
+                  </label>
+                  <label class="container">
+                    <input type="radio" name="filterType" value="Oldest">Oldest</input>
+                  </label>
+                </span>
+                <span>
+                  <h4>Filter by course name</h4>
+                  <input type="search" id="courseNameInput" placeholder="Course Name">
+                </span>
+                <footer > <button type="submit" class="fltr fltr-btn">Apply</button></footer>
+              </div>
+              </div>   
+            </div> 
+        </div> 
+        <div class="container">
+        <div class="Question-container">
+            <aside class="side">
+                <p> <span>0</span>votes</p>
+                <p class="ans"><span>0</span>answers</p>
+                <p>level<span>4</span></p>
+            </aside>
+            <div class="main">
+                <article>Extract value from jQuery Slider/Input to use globally without relying on console logging </article>
+                <p class="crs-name">course name</p>
+                <footer class="u-name">omaryassen / <time datetime="2023-08-01">August 1, 2023</time></footer>
+            </div>
+        </div>
+        </div>
         </main>
+        
     </body>
+    <script src="filter.js"></script>
 </html>

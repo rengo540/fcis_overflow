@@ -10,6 +10,7 @@
   height: 100vh;
 }
 .filter-container{
+ 
   color: #e4e3e3;
   flex-wrap: wrap;
   position: relative;
@@ -26,18 +27,21 @@ label{
   gap: 5px;
   width: max-content;
 }
-.body{
-  width: 100%;
+input{
+  cursor: pointer;
 }
 select{
   font-size: 1em;
-  border: 2px solid rgba(0, 0, 0, 0.526);
-  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.3rem;
+  border: none;
+  /* border: 2px solid rgba(0, 0, 0, 0.526); */
+  border-radius: 3px;
 }
-button{
+.fltr-btn{
   padding-right: 2rem;
   padding-left: 2rem;
-  height: 5vh;
+  height: 4.5vh;
   background-color: #f48225;
   border-radius: 5px;
   border-color: rgba(240, 255, 255, 0);
@@ -45,21 +49,29 @@ button{
   font-weight: 500;
   font-size: 1em;
 }
-button:hover {
-  transform: translateY(-1px);
-  background-color: #f48931;
+.lvls{
+  width:-webkit-fill-available;
 }
-body{
-  overflow: hidden;
+#courseNameInput{
+  cursor: text !important;
+  padding: .5rem;
+  border-radius: 3px;
+  border: none;
 }
-h2{
-  font-size: 1em;
-  font-weight: 500;
+.fltr-btn:hover {
+/*   transform: translateY(-1px); */
+  background-color: #f68f3a;
+transition: .3s ease-in;
 }
+.body{
+  margin-right: 9.8rem;
+}
+
 input:checked{
   background-color: #f48225;
 }
 .filterMenu {
+  background-color: rgb(49, 48, 48);
   position: absolute;
   left: 0;
   top: 100%; 
@@ -76,6 +88,10 @@ input:checked{
   gap: 2rem;
   
 }
+.Apply{
+  width: max-content;
+}
+
 .filter-button button {
   margin-top: 1rem; 
  

@@ -1,6 +1,8 @@
 const filterButton = document.getElementById("filterButton");
 const filterMenu = document.querySelector(".filterMenu");
 const applyButton = document.querySelector("#filterContainer button[type='submit']");
+const apply = document.querySelector(".fltr");
+
 const courseNameInput = document.querySelector("#filterContainer input[type='search']");
 const selectedFilters = {};
 
@@ -12,9 +14,9 @@ filterButton.addEventListener("click", () => {
 document.addEventListener('DOMContentLoaded', function () {
     const courseNameInput = document.querySelector('#courseNameInput');
     courseNameInput.addEventListener('input', function() {
-      selectedFilters.courseName = this.value; // Update the courseName property in selectedFilters
+      selectedFilters.courseName = this.value; 
     });
-    // Your JavaScript code here
+    
     const selectedFilters = {
       noAnswers: false,
       answered: false,
@@ -33,8 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const selectedLevel = document.querySelector('#lvls').value;
         selectedFilters.level = selectedLevel;
         
-        // You can access selectedFilters object here and use it as needed
-        console.log(selectedFilters); // Just an example, you can remove this line
+       
+        console.log(selectedFilters); 
     }
   
     const applyButton = document.querySelector('button[type="submit"]');
@@ -52,4 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
     radioButtons.forEach(radioButton => {
       radioButton.addEventListener('change', updateFilters);
     });
+    apply.addEventListener('click' , ()=>{
+      updateFilters();
+      filterMenu.classList.remove("active");
+    })
   });
