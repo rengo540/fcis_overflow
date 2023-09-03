@@ -2,7 +2,6 @@ const filterButton = document.getElementById("filterButton");
 const filterMenu = document.querySelector(".filterMenu");
 const applyButton = document.querySelector("#filterContainer button[type='submit']");
 const apply = document.querySelector(".fltr");
-
 const courseNameInput = document.querySelector("#filterContainer input[type='search']");
 const selectedFilters = {};
 
